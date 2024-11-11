@@ -44,20 +44,30 @@ public class SampleWindow extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		
 		//JFileChooser インスタンス生成
 		JFileChooser fileChooser = new JFileChooser();
 		//setFileFilter(引数)：ファイルフィルターの設定
 		fileChooser.setFileFilter(fileExtensionfilter);
 		//setCurrentDirectory()：デフォルトのフォルダーの設定
-		fileChooser.setCurrentDirectory(new File("C:\\Temp"));
+		fileChooser.setCurrentDirectory(new File("C:\\pleiades"));
 		//ファイル選択ダイアログボックスの表示:
-		int selected = fileChooser.showOpenDialog(this);
-		//ファイル選択ダイアログボックスの表示:
-		if (selected == JFileChooser.APPROVE_OPTION) {
-			File file = fileChooser.getSelectedFile();
-			String fileName = file.getName();
-			txfFileName.setText(fileName);
-			System.out.println(fileChooser.getSelectedFile());
-		}
+		
+		
+				int selected = fileChooser.showOpenDialog(this);
+				//ファイル選択ダイアログボックスの表示:
+				if (selected == JFileChooser.APPROVE_OPTION) {
+					//選択されたファイルについてのFileインスタンスの生成
+					File file = fileChooser.getSelectedFile();
+					//ファイル名を取得
+					String fileName = file.getName();
+					
+					txfFileName.setText(fileName);
+					System.out.println(fileChooser.getSelectedFile());
+					
+					
+				}
+				
+				
 	}
 }
