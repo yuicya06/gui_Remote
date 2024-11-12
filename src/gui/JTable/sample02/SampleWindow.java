@@ -13,13 +13,13 @@ public class SampleWindow extends JFrame {
 		// DefaultTableModel を使用して JTable を作成
 		DefaultTableModel model = new DefaultTableModel();
 		// テーブルの列名とデータを定義
-		String[] columnNames = { "名前", "年齢", "都市" };
+		String[] columnNames = { "名前", "年齢", "都市", "出身" };
 		Object[][] data = {
-				{ "Alice", 25, "New York" },
-				{ "Bob", 30, "Los Angeles" },
-				{ "Charlie", 22, "Chicago" },
-				{ "David", 35, "San Francisco" },
-				{ "Eve", 28, "Miami" }
+				{ "Alice", 25, "New York", "America"},
+				{ "Bob", 30, "Los Angeles", "America" },
+				{ "Charlie", 22, "Chicago", "America" },
+				{ "David", 35, "San Francisco", "America" },
+				{ "Eve", 28, "Miami", "America" }
 		};
 		// 列名を DefaultTableModel に追加
 		model.setColumnIdentifiers(columnNames);

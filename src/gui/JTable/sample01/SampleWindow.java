@@ -10,8 +10,9 @@ public class SampleWindow extends JFrame {
 		super(title);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(400, 300);
-		// テーブルの列名とデータを定義
+		// テーブルの列名
 		String[] columnNames = { "名前", "年齢", "都市" };
+		//データを定義
 		Object[][] data = {
 				{ "Alice", 25, "New York" },
 				{ "Bob", 30, "Los Angeles" },
@@ -24,6 +25,8 @@ public class SampleWindow extends JFrame {
 		JTable table = new JTable(model);
 		// テーブルをスクロール可能にする
 		JScrollPane scrollPane = new JScrollPane(table);
+		
+		//フレームにScrollPaneを追加
 		add(scrollPane);
 	}
 }
